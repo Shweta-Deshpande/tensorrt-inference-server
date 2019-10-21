@@ -32,7 +32,7 @@
 					{
 						"name": "Print Env",
 						"definition": "Print Environment",
-						"command": "printenv | sort",
+						"command": "printenv | sort\necho testing",
 						"properties": null
 					},
 					{
@@ -141,21 +141,30 @@
 					"default": {
 						"fetch_logs": true,
 						"code_analysis": {
-							"publish": true,
-							"properties": []
+							"publish": false,
+							"properties": null
 						},
 						"delete_instances": false
 					},
 					"on_success": {
-						"code_analysis": null,
+						"code_analysis": {
+							"publish": false,
+							"properties": null
+						},
 						"delete_instances": false
 					},
 					"on_failure": {
-						"code_analysis": null,
+						"code_analysis": {
+							"publish": false,
+							"properties": null
+						},
 						"delete_instances": false
 					},
 					"on_abort": {
-						"code_analysis": null,
+						"code_analysis": {
+							"publish": false,
+							"properties": null
+						},
 						"delete_instances": false
 					}
 				},
